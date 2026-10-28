@@ -1,0 +1,131 @@
+{
+  "version": "1.0",
+  "fecha": "2026-10-27",
+  "modelo": "KNN",
+  "hiperparametros": {
+    "modelo__algorithm": "auto",
+    "modelo__leaf_size": 30,
+    "modelo__metric": "minkowski",
+    "modelo__metric_params": null,
+    "modelo__n_jobs": -1,
+    "modelo__n_neighbors": 101,
+    "modelo__p": 2,
+    "modelo__weights": "uniform"
+  },
+  "scikit_learn": "1.9.1",
+  "filas_entrenamiento_usadas": 60000,
+  "umbral_decision_f1": 0.1485148514851485,
+  "umbrales_riesgo": {
+    "medio": 0.06930693069306931,
+    "alto": 0.13861386138613863
+  },
+  "cortes_percentil_riesgo": [
+    0.5,
+    0.85
+  ],
+  "columnas_entrada": [
+    "AMT_INCOME_TOTAL",
+    "AMT_CREDIT",
+    "AMT_ANNUITY",
+    "AMT_GOODS_PRICE",
+    "CNT_CHILDREN",
+    "CNT_FAM_MEMBERS",
+    "REGION_POPULATION_RELATIVE",
+    "REGION_RATING_CLIENT",
+    "EXT_SOURCE_1",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_3",
+    "DAYS_BIRTH",
+    "DAYS_EMPLOYED",
+    "NAME_CONTRACT_TYPE",
+    "FLAG_OWN_CAR",
+    "FLAG_OWN_REALTY",
+    "NAME_INCOME_TYPE",
+    "NAME_EDUCATION_TYPE",
+    "NAME_FAMILY_STATUS",
+    "NAME_HOUSING_TYPE",
+    "OCCUPATION_TYPE"
+  ],
+  "categorias": {
+    "NAME_CONTRACT_TYPE": [
+      "Cash loans",
+      "Revolving loans"
+    ],
+    "FLAG_OWN_CAR": [
+      "N",
+      "Y"
+    ],
+    "FLAG_OWN_REALTY": [
+      "N",
+      "Y"
+    ],
+    "NAME_INCOME_TYPE": [
+      "Businessman",
+      "Commercial associate",
+      "Maternity leave",
+      "Pensioner",
+      "State servant",
+      "Student",
+      "Unemployed",
+      "Working"
+    ],
+    "NAME_EDUCATION_TYPE": [
+      "Academic degree",
+      "Higher education",
+      "Incomplete higher",
+      "Lower secondary",
+      "Secondary / secondary special"
+    ],
+    "NAME_FAMILY_STATUS": [
+      "Civil marriage",
+      "Married",
+      "Separated",
+      "Single / not married",
+      "Unknown",
+      "Widow"
+    ],
+    "NAME_HOUSING_TYPE": [
+      "Co-op apartment",
+      "House / apartment",
+      "Municipal apartment",
+      "Office apartment",
+      "Rented apartment",
+      "With parents"
+    ],
+    "OCCUPATION_TYPE": [
+      "Accountants",
+      "Cleaning staff",
+      "Cooking staff",
+      "Core staff",
+      "Drivers",
+      "HR staff",
+      "High skill tech staff",
+      "IT staff",
+      "Laborers",
+      "Low-skill Laborers",
+      "Managers",
+      "Medicine staff",
+      "Private service staff",
+      "Realty agents",
+      "Sales staff",
+      "Secretaries",
+      "Security staff",
+      "Waiters/barmen staff"
+    ]
+  },
+  "metricas_prueba_umbral_f1": {
+    "umbral": 0.1485,
+    "accuracy": 0.8359592215013901,
+    "precision": 0.2114864864864865,
+    "recall": 0.37824773413897284,
+    "f1": 0.27128927410617554,
+    "roc_auc": 0.7200629369326486
+  },
+  "limitaciones": [
+    "Proyecto académico: no es una herramienta para conceder o denegar créditos reales.",
+    "La puntuación no está calibrada: no es una probabilidad real de impago.",
+    "Datos históricos de Home Credit: no representan necesariamente a CrediAvanza.",
+    "TARGET es binaria; los niveles bajo/medio/alto son categorías operativas propuestas.",
+    "Posibles sesgos: no se ha realizado una auditoría de equidad completa."
+  ]
+}

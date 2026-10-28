@@ -1,0 +1,4 @@
+,accuracy,precision,recall,f1,roc_auc
+Referencia (clase mayoritaria),0.9193,0.0,0.0,0.0,0.5
+KNN (umbral 0.5),0.9193,0.0,0.0,0.0,0.7169
+Árbol (umbral 0.5),0.6278,0.1374,0.6821,0.2287,0.698
